@@ -1,0 +1,25 @@
+input[type="text"] {
+  width: 90%;
+  text-align: center;
+  padding: 12px 20px;
+  margin: 8px 8px;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  font-size: 20px;
+}
+
+input[type="text"]:focus {
+  border: 3px solid #555;
+}
+
+#submit-id {
+  padding: 15px;
+  background-color: orange;
+  color: white;
+  border-radius: 4px;
+  font-weight: bolder;
+}
+
+#submit-id:hover {
+  background-color: lightgreen;
+}
