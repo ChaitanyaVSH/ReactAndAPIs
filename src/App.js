@@ -7,9 +7,10 @@ class App extends Component {
   };
 
   componentDidMount() {
-    fetch("https://api.github.com/users")
+    fetch("http://127.0.0.1:1234/api/courses")
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         this.setState({
           data: data,
         });
@@ -21,7 +22,7 @@ class App extends Component {
       margin: 10,
       padding: 10,
       color: "white",
-      backgroundColor: "lightblue",
+      backgroundColor: "orange",
       width: "40%",
       alignItems: "center",
       justifyContent: "center",
@@ -30,11 +31,11 @@ class App extends Component {
     return (
       <div>
         <h1>
-          {users.map((user) => (
-            <div key={user.id} style={styles}>
-              <h3>Username: {user.login}</h3>
+          {users.map((course) => (
+            <div key={course.id} style={styles}>
+              <h3>Course ID: {course.id}</h3>
               <ul>
-                <li>Followers: {user.followers_url.length}</li>
+                <li>Course Name: {course.name}</li>
               </ul>
             </div>
           ))}
