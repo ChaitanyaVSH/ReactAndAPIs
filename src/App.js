@@ -23,6 +23,11 @@ class App extends Component {
           data: data,
           loading: false,
         });
+      })
+      .catch(() => {
+        this.setState({
+          loading: false,
+        });
       });
   }
 
