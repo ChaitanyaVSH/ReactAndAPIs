@@ -23,7 +23,8 @@ class SearchField extends Component {
     const styles = {
       textAlign: "center",
       alignItems: "center",
-      margin: 20,
+      marginTop: 20,
+      marginBottom: 20,
       padding: 20,
       backgroundColor: "#ccc",
     };

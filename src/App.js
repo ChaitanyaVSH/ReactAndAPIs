@@ -19,6 +19,7 @@ class App extends Component {
     fetch("http://127.0.0.1:1234/api/courses")
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         this.setState({
           data: data,
           loading: false,
@@ -54,10 +55,12 @@ class App extends Component {
       ) : (
         <div>
           {filteredData.map((course) => (
-            <div key={course.id} style={styles}>
+            <div key={course.id} style={{ styles }}>
               <h3>Course ID: {course.id}</h3>
               <ul>
                 <li>Course Name: {course.name}</li>
+                <li>Taught By: {course.taughtBy}</li>
+                <li>Duration: {course.duration}</li>
               </ul>
             </div>
           ))}
@@ -73,6 +76,8 @@ class App extends Component {
               <h3>Course ID: {course.id}</h3>
               <ul>
                 <li>Course Name: {course.name}</li>
+                <li>Taught By: {course.taughtBy}</li>
+                <li>Duration: {course.duration}</li>
               </ul>
             </div>
           ))}
